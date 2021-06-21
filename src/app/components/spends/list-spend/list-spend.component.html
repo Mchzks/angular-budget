@@ -1,0 +1,25 @@
+<h4 class="text-center">Spends List</h4>
+<hr>
+<div class="row" style="margin-top: 40px;">
+    <div class="col-lg-6">
+        <div class="alert alert-success">
+            Budget <strong>${{ budget }}</strong>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="alert-size" [ngClass]="colored()">
+            Avaliable <strong>${{ avaliable }}</strong>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item d-flex justify-content-between" *ngFor="let spend of spendList">
+                <strong>{{ spend.name }}</strong>
+                <span class="badge bg-secondary rounded-pill">{{ spend.quantity }}</span>
+            </li>
+        </ul>
+    </div>
+
+</div>
